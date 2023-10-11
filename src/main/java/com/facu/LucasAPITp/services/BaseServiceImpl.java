@@ -3,6 +3,8 @@ package com.facu.LucasAPITp.services;
 import com.facu.LucasAPITp.entities.Base;
 import com.facu.LucasAPITp.repositories.BaseRepository;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,6 +17,8 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
         this.baseRepository = baseRepository;
     }
 
+
+
     @Override
     @Transactional
     public List<E> findALL() throws Exception {
@@ -25,6 +29,19 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
             throw new Exception(e.getMessage());
         }
     }
+
+
+    @Override
+    @Transactional
+    public Page<E> findAllPaged(Pageable pageable) throws Exception{
+        try {
+            Page<E> entities = baseRepository.findAll(pageable);
+            return entities;
+        } catch (Exception e){
+            throw new Exception(e.getMessage());
+        }
+    }
+
 
     @Override
     @Transactional
@@ -75,4 +92,7 @@ public abstract class BaseServiceImpl<E extends Base, ID extends Serializable> i
             throw new Exception(e.getMessage());
         }
     }
+
+
+
 }

@@ -134,30 +134,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "GET ALL PAGED",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
-				},
-				{
-					"name": "SEARCH PAGED",
-					"request": {
-						"method": "GET",
-						"header": []
-					},
-					"response": []
 				}
 			]
 		},
@@ -179,8 +155,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/ap1/v1/autores",
-							"protocol": "http",
+							"raw": "localhost:8080/ap1/v1/autores",
 							"host": [
 								"localhost"
 							],
@@ -302,7 +277,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"denominacion\": \"Guaymallén\"\r\n}",
+							"raw": "{\r\n    \"id\":1,\r\n    \"denominacion\": \"Guaymallén\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
