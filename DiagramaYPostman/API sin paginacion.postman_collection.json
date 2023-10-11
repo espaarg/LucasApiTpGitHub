@@ -1,0 +1,401 @@
+{
+	"info": {
+		"_postman_id": "6c2ee590-b2f1-4c46-9ccd-16af1269e477",
+		"name": "API sin paginacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27314442"
+	},
+	"item": [
+		{
+			"name": "Persona",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"ALfredro\",\r\n    \"apellido\":\"AEdqqf\",\r\n    \"dni\":2000140,\r\n    \"domicilio\":{\r\n        \"calle\":\"Catamarca\",\r\n        \"numero\":23144,\r\n        \"localidad\":{\r\n            \"id\":1,\r\n            \"denominacion\":\"Guaymallén\"\r\n        }\r\n    },\r\n    \"libros\":[\r\n        {\r\n            \"titulo\":\"Los dias del venado\",\r\n            \"fecha\":2032,\r\n            \"genero\":\"Fanttsatoccas\",\r\n            \"paginas\":399,\r\n            \"autores\":[\r\n                {\r\n                    \"id\":1,\r\n                    \"nombre\": \"Pedrin\",\r\n                    \"apellido\":\"OOASS\",\r\n                    \"biografia\":\"Habia una vez una leyenda de la leyenda de la legendaria leyenda\"\r\n                }\r\n            ]\r\n\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"nombre\": \"Funciona\",\r\n    \"apellido\":\"Encasa\",\r\n    \"dni\":\"01001010\",\r\n    \"domicilio\":{\r\n        \"calle\":\"Granada\",\r\n        \"numero\":2231,\r\n        \"localidad\":{\r\n            \"id\":1,\r\n            \"denominacion\":\"Guaymallén\"\r\n        }\r\n    },\r\n    \"libros\":[\r\n        {\r\n            \"titulo\":\"Los dias del venado\",\r\n            \"fecha\":2032,\r\n            \"genero\":\"Fanttsatoccas\",\r\n            \"paginas\":399,\r\n            \"autores\":[\r\n                {\r\n                    \"id\":1,\r\n                    \"nombre\": \"Pedrin\",\r\n                    \"apellido\":\"OOASS\",\r\n                    \"biografia\":\"Habia una vez una leyenda de la leyenda de la legendaria leyenda\"\r\n                }\r\n            ]\r\n\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/personas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/personas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "CREATE Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n                    \"nombre\": \"Pedrin\",\r\n                    \"apellido\":\"OOASS\",\r\n                    \"biografia\":\"Habia una vez una leyenda de la leyenda de la legendaria leyenda\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ap1/v1/autores",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"nombre\": \"Julio\",\r\n    \"apellido\":\"Iglesias\",\r\n    \"biografia\":\"Aserejé, a rejé, rejebe tu rejere\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/autores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/autores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/autores/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/autores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "CREATE Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"denominacion\": \"Guaymallén\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/ap1/v1/localidades",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE Copy",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n    \"denominacion\": \"New York\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/localidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/localidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ONE Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/localidades/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/ap1/v1/localidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"ap1",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
